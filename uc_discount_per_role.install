@@ -1,0 +1,39 @@
+<?php
+/*
+ * Implementation hook_install
+ */
+function uc_discount_per_role_install() {
+  drupal_install_schema('uc_discount_per_role');
+}
+
+
+/*
+ * Implementation hook_uninstall
+ */
+function uc_discount_per_role_uninstall() {
+  drupal_uninstall_schema('uc_discount_per_role');
+}
+
+function uc_discount_per_role_schema() {
+  $schema = array();
+  $schema['uc_discount_per_role'] = array(
+    'fields' => array(
+      'did' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'rid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'discount' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('did'),
+  );
+  return $schema;
+}

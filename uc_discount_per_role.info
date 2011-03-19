@@ -1,0 +1,5 @@
+name = Discount per role
+description = description here
+
+package = Ubercart - extra
+core = 6.x
