@@ -188,8 +188,9 @@ function uc_discount_per_role_nodeapi(&$node, $op) {
 }
 
 function theme_uc_discount_per_role_total_new_price($price = 0) {
+  $output = '';
   if ($price) {
-    $output = '<div class="discount-prise"><p>'. t('Discount price: ') . uc_currency_format($price) .'</p></div>';
+    $output .= '<div class="discount-prise"><p>'. t('Discount price: ') . uc_currency_format($price) .'</p></div>';
   }
   return $output;
 }
