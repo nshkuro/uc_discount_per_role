@@ -18,7 +18,7 @@
 -- CONFIGURATION --
 
 * Configure discount value:
-  Goto: 'admin/store/settings/discount_per_role' and set discount value for each user role.
+  Goto: 'http://example.com/admin/store/settings/discount_per_role' and set discount value for each user role.
 
 * Enable discount for your ubercart product content types.
-  Example: 'http://discount.dev/admin/content/node-type/product'.
+  Example: 'http://example.com/admin/content/node-type/product'.
