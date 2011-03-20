@@ -1,5 +1,8 @@
 name = Discount per role
 description = description here
-
+dependencies[] = uc_product
+dependencies[] = uc_cart
+dependencies[] = uc_store
+dependencies[] = uc_order
 package = Ubercart - extra
 core = 6.x
