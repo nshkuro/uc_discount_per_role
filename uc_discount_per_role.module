@@ -1,5 +1,14 @@
 <?php
 
+ // $Id$
+
+/*
+ * @file
+ *
+ * Implementation discount per user role functional for Ubercart
+ *
+ */
+
 /*
  * Implementation hook_menu
  */
@@ -24,7 +33,6 @@ function uc_discount_per_role_settings_form() {
     $form['discount_settings_'. $rid] = array(
       '#type' => 'fieldset',
       '#title' => t($role),
-      '#weight' => 5,
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
     );
@@ -93,7 +101,7 @@ function uc_discount_per_role_calculate($price, $user) {
 }
 
 function uc_discount_per_role_get_discount_by_roles($roles) {
-  if(!empty($roles)) {
+  if (!empty($roles)) {
     $discount = 0;
     foreach ($roles as $rid => $role) {
       $new_discount = variable_get('discount_value_'. $rid, 0);
